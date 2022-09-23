@@ -6,6 +6,9 @@ project "GLFW"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	disablewarnings { "4047", "4024", "4013" }
+	flags { "MultiProcessorCompile" }
+	
 	files
 	{
 		"include/GLFW/glfw3.h",
